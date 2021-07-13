@@ -1,0 +1,23 @@
+{
+  "name": "async-checkpoint",
+  "version": "0.0.1",
+  "description": "async-checkpoint for class",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/langley234/async-checkpoint.git"
+  },
+  "author": "Mike Langenbach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/langley234/async-checkpoint/issues"
+  },
+  "homepage": "https://github.com/langley234/async-checkpoint#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
