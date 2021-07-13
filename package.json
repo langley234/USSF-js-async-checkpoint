@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/langley234/async-checkpoint.git"
+    "url": "git@github.com:langley234/USSF-js-async-checkpoint.git"
   },
   "author": "Mike Langenbach",
   "license": "ISC",
