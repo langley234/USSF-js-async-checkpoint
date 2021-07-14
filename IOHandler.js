@@ -10,7 +10,6 @@ class IOHandler
         this.m_activePromises = 0;
         this.m_activeQueries = [];
         this.m_resultData = '';
-        this.m_promise;
     }
 
     _finishQueryProcessing()
@@ -29,12 +28,14 @@ class IOHandler
             if (i < parseInt(this.m_activeQueries.length - 1))
                 this.m_resultData += '\n';
         }
-
         console.log(this.m_resultData);
     }
 
     query(name)
     {
+        if (typeof name != 'string')
+            return -1;
+            
         if (name === '' || name === undefined)
             return -1;
 
@@ -66,14 +67,12 @@ class IOHandler
         }.bind(this))
     }
 
-    loadFileSync(filename, presentImmediate = false) {
+    loadFileSync(filename, presentImmediate = false) 
+    {
         return this.m_fileHandler.loadFileSync(filename, presentImmediate);
     }
 
-    _processFile(file)
-    {
-        this.m_currWorkingFile = file.split(/[\n\r]+/);
-    }
+    _processFile(file) { this.m_currWorkingFile = file.split(/[\n\r]+/); }
 
     processFile(file)
     {

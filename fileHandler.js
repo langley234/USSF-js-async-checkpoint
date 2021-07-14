@@ -1,22 +1,17 @@
 const fs = require('fs');
 
-class FileHandler
-{
-    constructor()
-    {
+class FileHandler {
+    constructor() {
         this.file = '';
         this.loadComplete = false;
         this.saveComplete = false;
     }
 
-    readFileSync(filename, presentImmediate = false)
-    {
-        try
-        {
+    readFileSync(filename, presentImmediate = false) {
+        try {
             const data = fs.readFileSync(filename, 'utf8');
             return data;
-        } catch(err)
-        {
+        } catch (err) {
             console.log(err);
         }
     }
