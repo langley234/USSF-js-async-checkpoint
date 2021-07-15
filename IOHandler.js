@@ -34,12 +34,11 @@ class IOHandler
     query(name)
     {
         if (typeof name != 'string')
+        {
+            console.log(`Must provide a string value for 'name'`);
             return -1;
-            
-        if (name === '' || name === undefined)
-            return -1;
+        }           
 
-        
         this._queryExternalDatabase(
             `https://pokeapi.co/api/v2/pokemon/${name}`, name);
     }
